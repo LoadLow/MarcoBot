@@ -38,7 +38,7 @@ commands = {
         'limit': 0,
         'argc': 0,
         'protected': False,
-        'return': 'MM Any% WR is 1:27:09'
+        'return': 'MM Any% WR is 1:27:09 (by Ennopp112)'
     },
 
     '!pb': {
