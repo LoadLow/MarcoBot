@@ -39,6 +39,13 @@ commands = {
         'argc': 0,
         'protected': False,
         'return': 'MM Any% WR is 1:27:09'
+    },
+
+    '!pb': {
+        'limit': 0,
+        'argc': 0,
+        'protected': False,
+        'return': 'MM Any% Marco8641\'s PB is 1:30:03'
     }
 }
 
