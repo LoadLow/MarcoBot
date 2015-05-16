@@ -45,7 +45,7 @@ commands = {
         'limit': 0,
         'argc': 0,
         'protected': False,
-        'return': 'MM Any% Marco8641\'s PB is 1:30:03'
+        'return': 'MM Any% Marco8641\'s PB is 1:29:13 (sub 1:30 :o)'
     }
 }
 
