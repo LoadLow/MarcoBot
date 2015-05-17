@@ -1,3 +1,5 @@
+# coding: utf8
+
 """
 Simple IRC Bot for Twitch.tv
 
