@@ -12,6 +12,8 @@ class irc:
     def __init__(self, config, credentials):
         self.config = config
         self.credentials = credentials
+        self.lastMsg = ""
+        self.lastMsgTime = 1
 
     def check_for_message(self, data):
         if re.match(
@@ -46,7 +48,17 @@ class irc:
             return True
 
     def send_message(self, channel, message):
-        self.sock.send('PRIVMSG %s :%s\n' % (channel, message.encode('utf-8')))
+        if message == self.lastMsg:
+            self.lastMsgTime += 1
+        else:
+            self.lastMsgTime = 1
+
+        if self.lastMsgTime > 1:
+            self.sock.send('PRIVMSG %s :%s\n' % (channel, (message + " (" + str(self.lastMsgTime) + ")").encode('utf-8')))
+        else:
+            self.sock.send('PRIVMSG %s :%s\n' % (channel, message.encode('utf-8')))
+
+        self.lastMsg = message
 
     def get_irc_socket_object(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
