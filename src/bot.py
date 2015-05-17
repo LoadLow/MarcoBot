@@ -47,6 +47,21 @@ class MarcoBot:
 
                 ppi(channel, message, username)
 
+                if username.lower() == "Alexbip15_bot".lower():
+                    continue
+
+                lowerMsg = message.lower()
+                if "eu ta nouvelle manette" in lowerMsg \
+                        or "reçu ta nouvelle manette" in lowerMsg\
+                        or "reçu ta manette" in lowerMsg\
+                        or "eu ta manette" in lowerMsg\
+                        or "alors ta nouvelle manette" in lowerMsg:
+                    result = "Oui j'ai reçu ma nouvelle manette et oui elle va bien ! - marco8641, 5/16/2015"
+                    resp = '%s' % result
+                    pbot(resp, channel)
+                    irc.send_message(channel, resp)
+                    continue
+
                 # check if message is a command with no arguments
                 if commands.is_valid_command(message) or commands.is_valid_command(message.split(' ')[0]):
                     command = message
