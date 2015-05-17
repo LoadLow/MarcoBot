@@ -57,7 +57,8 @@ class MarcoBot:
                         or "ta nouvelle manette" in lowerMsg\
                         or "ta manette" in lowerMsg\
                         or "eu ta manette" in lowerMsg\
-                        or "alors ta nouvelle manette" in lowerMsg:
+                        or "alors ta nouvelle manette" in lowerMsg\
+                        or "cette nouvelle manette" in lowerMsg:
                     result = "Oui j'ai recu ma nouvelle manette GameCube (Amazon/Chine), et oui elle va bien ! - marco8641, 5/16/2015"
                     resp = '%s' % result
                     pbot(resp, channel)
