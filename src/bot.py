@@ -54,8 +54,8 @@ class MarcoBot:
 
                 lowerMsg = message.lower()
                 if "eu ta nouvelle manette" in lowerMsg \
-                        or "reçu ta nouvelle manette" in lowerMsg\
-                        or "reçu ta manette" in lowerMsg\
+                        or "ta nouvelle manette" in lowerMsg\
+                        or "ta manette" in lowerMsg\
                         or "eu ta manette" in lowerMsg\
                         or "alors ta nouvelle manette" in lowerMsg:
                     result = "Oui j'ai reçu ma nouvelle manette et oui elle va bien ! - marco8641, 5/16/2015"
